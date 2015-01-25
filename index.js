@@ -6,10 +6,10 @@
 
 export function dsp(time)
 {
-  return sin(time, 440, 0.1) + sin(time, 220, 0.4);
+  return sin(time, sin(time, 40, 0.01) + 440, 0.3);
 }
 
-function sin(time, frequency, volume)
+function sin(time, frequency, amplitude)
 {
-  return Math.sin(Math.PI * 2 * time * frequency) * volume;
+  return Math.sin(Math.PI * 2 * time * frequency) * amplitude;
 }
